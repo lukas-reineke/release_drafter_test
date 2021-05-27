@@ -45,6 +45,10 @@ autolabeler:
       body:
           - '/JIRA-[0-9]{1,4}/'
 
+exclude-labels:
+    - 'release/production'
+    - 'release/staging'
+
 template: |
 
     *Add :star: if an update affects the customer’s UI/UX*
