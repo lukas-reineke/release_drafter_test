@@ -1,0 +1,40 @@
+name-template: "v$NEXT_PATCH_VERSION"
+tag-template: "v$NEXT_PATCH_VERSION"
+categories:
+  - title: "New Features"
+    labels:
+      - "kind: feature"
+      - "kind: enhancement"
+  - title: "Fixed Issues"
+    label: "kind: bug"
+  - title: "Fixed Security Issues"
+    label: "kind: security"
+  - title: "Removes"
+    label: "kind: deprecated"
+  - title: "Infrastructure"
+    label: "kind: infra"
+  - title: "Refactor"
+    label: "kind: refactor"
+  - title: "Dependencies"
+    label: "kind: dependencies"
+  - title: "UI"
+    label: "kind: ui"
+  - title: "Tests"
+    label: "kind: tests"
+  - title: "Tooling"
+    label: "kind: tooling"
+  - title: "Documentation"
+    label: "kind: documentation"
+
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+template: |
+
+  *Add :star: if an update affects the customer’s UI/UX*
+
+  ## Changes
+
+  $CHANGES
+
+  ## Release Pull Request
+
+  *Add a link to release pull request*
