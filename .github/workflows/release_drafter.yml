@@ -13,6 +13,9 @@ jobs:
     update_release_draft:
         runs-on: ubuntu-latest
         name: Update release draft
+        permissions:
+            contents: write
+            pull-requests: write
         steps:
             - uses: release-drafter/release-drafter@v5.11.0
               env:
