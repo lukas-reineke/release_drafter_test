@@ -1,40 +1,58 @@
-name-template: "v$NEXT_PATCH_VERSION"
-tag-template: "v$NEXT_PATCH_VERSION"
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
 categories:
-  - title: "New Features"
-    labels:
-      - "kind: feature"
-      - "kind: enhancement"
-  - title: "Fixed Issues"
-    label: "kind: bug"
-  - title: "Fixed Security Issues"
-    label: "kind: security"
-  - title: "Removes"
-    label: "kind: deprecated"
-  - title: "Infrastructure"
-    label: "kind: infra"
-  - title: "Refactor"
-    label: "kind: refactor"
-  - title: "Dependencies"
-    label: "kind: dependencies"
-  - title: "UI"
-    label: "kind: ui"
-  - title: "Tests"
-    label: "kind: tests"
-  - title: "Tooling"
-    label: "kind: tooling"
-  - title: "Documentation"
-    label: "kind: documentation"
+    - title: 'New Features'
+      labels:
+          - 'kind: feature'
+          - 'kind: enhancement'
+    - title: 'Fixed Issues'
+      label: 'kind: bug'
+    - title: 'Fixed Security Issues'
+      label: 'kind: security'
+    - title: 'Removes'
+      label: 'kind: deprecated'
+    - title: 'Infrastructure'
+      label: 'kind: infra'
+    - title: 'Refactor'
+      label: 'kind: refactor'
+    - title: 'Dependencies'
+      label: 'kind: dependencies'
+    - title: 'UI'
+      label: 'kind: ui'
+    - title: 'Tests'
+      label: 'kind: tests'
+    - title: 'Tooling'
+      label: 'kind: tooling'
+    - title: 'Documentation'
+      label: 'kind: documentation'
 
-change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+
+autolabeler:
+    - label: 'chore'
+      files:
+          - '*.md'
+      branch:
+          - '/docs{0,1}\/.+/'
+    - label: 'kind: bug'
+      branch:
+          - '/bug\/.+/'
+      title:
+          - '/fix/i'
+    - label: 'enhancement'
+      branch:
+          - '/feature\/.+/'
+      body:
+          - '/JIRA-[0-9]{1,4}/'
+
 template: |
 
-  *Add :star: if an update affects the customer’s UI/UX*
+    *Add :star: if an update affects the customer’s UI/UX*
 
-  ## Changes
+    ## Changes
 
-  $CHANGES
+    $CHANGES
 
-  ## Release Pull Request
+    ## Release Pull Request
 
-  *Add a link to release pull request*
+    *Add a link to release pull request*
