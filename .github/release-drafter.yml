@@ -49,6 +49,8 @@ exclude-labels:
     - 'release/production'
     - 'release/staging'
 
+commitish: master
+
 template: |
 
     *Add :star: if an update affects the customer’s UI/UX*
