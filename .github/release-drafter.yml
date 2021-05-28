@@ -50,6 +50,7 @@ exclude-labels:
     - 'release/staging'
 
 commitish: master
+filter-by-commitish: true
 
 template: |
 
