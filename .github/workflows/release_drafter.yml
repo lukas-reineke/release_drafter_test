@@ -17,6 +17,6 @@ jobs:
             contents: write
             pull-requests: write
         steps:
-            - uses: lukas-reineke/release-drafter@v5.15.0
+            - uses: lukas-reineke/release-drafter@v5.16.0
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
